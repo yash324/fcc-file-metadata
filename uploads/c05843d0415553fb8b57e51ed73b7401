@@ -1,0 +1,42 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int x) {
+        val = x;
+        left = null;
+        right = null;
+    }
+}
+
+public class Solution {
+    public int isSymmetric(TreeNode A) {
+
+    }
+
+    public boolean checkSymmetric(TreeNode A, TreeNode B){
+
+    }
+    public TreeNode getInvertedTree(TreeNode A) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(A);
+        while (!queue.isEmpty()) {
+            TreeNode temp = queue.poll();
+            TreeNode newTemp = new TreeNode(temp.val);
+            if (temp.left != null)
+                queue.add(temp.left);
+            newTemp.left = new TreeNode(temp.left.val);
+            temp.left = temp.right;
+            temp.right = temp2;
+
+            if (temp.right != null)
+                queue.add(temp.right);
+        }
+        return A;
+    }
+}
